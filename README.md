@@ -1,15 +1,13 @@
-# steering_evolution
+# Bubbles
 Javascript et P5
 
-reprise du code "steering_evolution" de Coding Train
+reprise du code de Coding Train
 
-ce "jeu" en html permet d'observer des créatures mobiles,
-dans le décor, des objets nourissants ou empoisonnés,
-- les créatures ont une attirance ou une aversion pour les objets
-- les créatures ont un "ADN" qu'elles transmettent en se reproduisant
-- l'adn pertinent est alors favorisé
+cette animation permet d'observer des bulles mobiles,
 
-ajouts:
-- les créatures se reproduisent si elles sont nourries
-- les créatures se reproduisent entre elles (ce n'est plus un clonage, mais un mélage des ADN parents)
-- ajout d'appétence pour la reproduction qui permet de se diriger vers des créatures 
+- utilisation de l'objet façon ES6
+- affichage avec la librairie P5
+
+- un clic permet de détuire une bulles
+- les bulles rebondissent
+- un cliquer glisser de la souris permet de créer des bulles
