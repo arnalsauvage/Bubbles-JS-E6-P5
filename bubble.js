@@ -1,11 +1,13 @@
 
-var mr = 0.10;
+// var mr = 0.10;
 
 class Bubble {
+	// crée une bulle, si couleurR = -1, on définit une couleur au hasard
 	constructor(x, y, rayon, couleurR =-1, couleurG, couleurB){
 		this.x = x;
 		this.y = y;
-		
+
+		// On définit la vitesse au hasard
 		this.mvx = random (-10,10);
 		this.mvy = random (-10,10);
 		
@@ -22,7 +24,8 @@ class Bubble {
 			this.couleurB = couleurB;
 		}
 	}
-	
+
+	// cette méthode indique si un point x,y est dans la bulle
 	xyDansLaBulle(x,y)
 	{
 		if ( dist(x,y,this.x, this.y ) < this.rayon)
@@ -30,7 +33,8 @@ class Bubble {
 		else
 			return false;
 	}
-	
+
+	// Cette méthode dessine une bulle
 	show ()
 	{
 	//	stroke(color(this.couleurR,this.couleurG,this.couleurB ));
@@ -39,7 +43,8 @@ class Bubble {
 		fill(this.couleurR, this.couleurG, this.couleurB, 128);
 		ellipse(this.x, this.y, this.rayon *2);
 	}
-	
+
+	// cette méthode applique un mouvement à une bulle d'après sa position et sa vitesse
 	move() {
 		this.x += this.mvx;
 		this.y += this.mvy;
@@ -63,6 +68,7 @@ class Bubble {
 	}
 }
 
+// Cette fonction détruit les bulles qui sont sous un point
 function popBubble(x,y)
 {
 	for (let i = 0; i < bubbles.length; i++)

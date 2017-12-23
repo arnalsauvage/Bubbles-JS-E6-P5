@@ -9,24 +9,25 @@ function setup() {
     let y = random(height);
     bubbles[i] = new Bubble(x, y , 20 + random(50) );
   }
-  debug = createCheckbox();
+ //  debug = createCheckbox();
 }
 
+// On peut faire disparaitre les bulles en cliquant dessus
 function mousePressed() {
-	popBubble( mouseX, mouseY)
-	poping = window.setInterval("bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 )))",200) ;
+    // On essaye de claquer une bulle
+	popBubble( mouseX, mouseY);
 }
 
-
+// On fait aparaitre 5 bulles par secondes (200 ms) tant que la souris est appuyée
 function mouseDragged() {
-//	window.setInterval(bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 ))),500) ;
- // bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 )));
+    if (poping==0)
+	    poping = window.setInterval("bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 )))",200) ;
 }
 
-
+// Quand on lâche souris, on stoppe l'apparition des bulles
 function mouseReleased() {
 	clearInterval(poping);
- // bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 )));
+    poping = 0;
 }
 
 function draw() {
@@ -35,7 +36,10 @@ function draw() {
 		bubble.move();
 		bubble.show();
 	}
-
+    textSize(22);
+    s = bubbles.length + " bulles.";
+    fill(150,0,0);
+    text(s, width - 150, height - 50, 150, 50);
   }
 
 /*
