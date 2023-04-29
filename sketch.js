@@ -9,7 +9,6 @@ function setup() {
     let y = random(height);
     bubbles[i] = new Bubble(x, y , 20 + random(50) );
   }
- //  debug = createCheckbox();
 }
 
 // On peut faire disparaitre les bulles en cliquant dessus
@@ -18,10 +17,10 @@ function mousePressed() {
 	popBubble( mouseX, mouseY);
 }
 
-// On fait aparaitre 5 bulles par secondes (200 ms) tant que la souris est appuyée
+// On fait apparaitre 10 bulles par secondes (90 ms) tant que la souris est appuyée
 function mouseDragged() {
-    if (poping==0)
-	    poping = window.setInterval("bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 )))",200) ;
+    if (poping===0)
+	    poping = window.setInterval("bubbles.push(new Bubble(mouseX, mouseY , 20 + random(50 )))",90) ;
 }
 
 // Quand on lâche souris, on stoppe l'apparition des bulles
@@ -41,11 +40,3 @@ function draw() {
     fill(150,0,0);
     text(s, width - 150, height - 50, 150, 50);
   }
-
-/*
-function preloadUpdate() {
-    preloadCount++;
-    if (preloadCount === PRELOADTOTAL)
-        launchGame();
-}
-*/

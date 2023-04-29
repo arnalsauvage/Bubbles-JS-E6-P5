@@ -13,4 +13,4 @@ cette animation permet d'observer des bulles mobiles,
 - un cliquer glisser de la souris permet de créer des bulles
 - une indication du nombre de bulles présentes est affichée en bas à droite du cadre
 
-Démo visible sur : [http://amedina.net/dev/javascript/p5/bubbles/](http://amedina.net/dev/javascript/p5/bubbles/)
+Démo visible sur : [https://www.lamedina.net/view/frontend/dev/javascript/p5/bubbles/index.htm](https://www.lamedina.net/view/frontend/dev/javascript/p5/bubbles/index.htm)
